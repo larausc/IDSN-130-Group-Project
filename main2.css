@@ -1,12 +1,14 @@
 /* CSS RESET */
 
 * {
-    margin: 0;
+  margin: 0;
 	padding: 0;
 	border: 0;
+  /*
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+  */
 }
 
 
@@ -282,14 +284,17 @@ button:hover {
 
 
 /* DIV STYLES*/
+
+/*
 #homeheader {
     width: 100%;
     height: 100%;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/2008-1206-USC-UCLA-009-RB-redblue.JPG/1200px-2008-1206-USC-UCLA-009-RB-redblue.JPG);
+    background-image: url(images/bg-img.jpg);
     opacity: 0.3;
     float: left;
     background-size: cover;
 }
+*/
 
 #indexheader {
     width: 100%;
@@ -304,6 +309,7 @@ button:hover {
     transform: translateX(-50%) translateY(-50%);
     text-align: center;
     color: #fff;
+    z-index: 2;
 }
 
 #homenav {
@@ -361,18 +367,71 @@ footer {
 }
 
 #homepage-body {
-  width: 100%;
-  display: flex;
+  width: 80%;
+  display: inline-block;
+  margin-left: 10%;
+  padding-top: 60px;
+  padding-bottom: 80px;
 }
 
 #usc-homepage {
-  width: 50%;
+  width: 48%;
   float: left;
-  border-color: : black;
-  border: 1px;
-  height: 10px;
+  border: 1px solid black;
+  text-align: center;
+  height: auto;
 }
 
 #ucla-homepage {
-  width: 50%;
+  width: 48%;
+  float: right;
+  border: 1px solid black;
+  text-align: center;
+  height: auto;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    text-align: center;
+    z-index: 10;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #f2f2f2;
+    font-weight: 200;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 16%;
+    text-align: center;
+    padding: 14px 16px;
+    display: inline-block;
+    border-bottom: none;
+}
+
+#home-test {
+  background: url(images/bg-img.jpg) no-repeat center center fixed;
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#home-overlay {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  z-index: 0;
 }
